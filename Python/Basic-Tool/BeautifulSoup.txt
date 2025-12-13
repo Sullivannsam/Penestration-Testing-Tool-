@@ -1,0 +1,17 @@
+Extracting parameters from: https://test.com/login
+--------------------------------------------------
+Found 1 form(s):
+
+Form #1:
+  Action: /login/process.php
+  Method: POST
+  Fields:
+    • username (text) = ''
+    • password (password) = ''
+    • csrf_token (hidden) = 'abc123xyz'
+    • submit (submit) = 'Login'
+LEGAL REMINDER:
+
+TO LAUNCH:
+
+python3 BeautifulSoup.py

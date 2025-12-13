@@ -1,0 +1,10 @@
+· 200 OK - Request successful (check content for errors/success)
+· 302 Found - Redirect (often means successful login!)
+· 401 Unauthorized - Need authentication
+· 403 Forbidden - No permission
+· 404 Not Found - Page doesn't exist
+· 405 Method Not Allowed - Wrong HTTP method
+· 500 Internal Server Error - SQL error often causes this!
+· 503 Service Unavailable - Server overloaded or blocking you
+
+                                                    ///GENERAL///

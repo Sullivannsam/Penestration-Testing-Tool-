@@ -1,0 +1,5 @@
+RUN APEHE AS SH
+
+1. chmod +x Apehe.sh
+2. sudo ./Apehe.sh
+3. Launch with an Option
