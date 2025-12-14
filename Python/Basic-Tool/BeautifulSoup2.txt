@@ -1,0 +1,114 @@
+1. pip install requests colorama
+-----------------------------------
+
+# For SQL Injection
+pip install sqlmap
+-----------------------------------
+
+
+# For Subdomain Enumeration
+git clone https://github.com/aboul3la/Sublist3r.git
+cd Sublist3r
+pip install -r requirements.txt
+-----------------------------------
+
+
+# For Amass
+# Download from: https://github.com/OWASP/Amass
+-----------------------------------
+
+
+## Make the script executable
+
+chmod +x BeautifulSoup2.py
+----------------------------------
+## Run the Script:
+
+python3 BeautifulSoup2.py
+----------------------------------
+
+    ####Features####
+
+1. SQL Injection Module:
+
+200+ payloads across 8 techniques
+
+Error-Based, Union-Based, Blind, Time-Based, Out-of-Band
+
+Second-Order and Alternative Encoding
+
+Automatic payload combination
+
+Multi-threaded testing
+----------------------------------
+
+
+2. Hidden Site Discovery:
+10+ discovery methods
+
+Sublist3r and Amass integration
+
+Certificate transparency logs
+
+DNS enumeration
+
+Archive.org scanning
+
+Virtual host discovery
+----------------------------------
+
+
+
+3. Bruteforce Suite:
+Dictionary attacks
+
+Credential stuffing
+
+Password spraying
+
+Hybrid attacks
+
+Offline attack simulation
+
+Custom wordlist support
+----------------------------------
+
+
+
+4. Vulnerability Scanner:
+15+ vulnerability checks
+
+SQLi, XSS, LFI, RFI detection
+
+Command injection testing
+
+Security header analysis
+
+Port scanning
+
+Endpoint discovery
+----------------------------------
+
+
+
+5. Reporting:
+TXT and JSON reports
+
+HTML summary reports
+
+Severity classification
+
+Timestamped results
+
+Browser integration
+
+----------------------------------
+
+
+Directory Structure:   
+
+pentest_framework.py
+├── wordlists/        # Custom wordlists
+├── results/          # Raw results
+├── reports/          # Generated reports
+└── tools/            # External tools
